@@ -1,0 +1,17 @@
+{{extend 'layout.html'}}
+<h2>Solicitar CAEA</h2>
+{{=form}}
+
+{{if caea is not None:}}
+<h3>CAEA</h3>
+{{=caea}}
+{{pass}}
+
+{{if errores:}}
+<h4>Errores</h4>
+<ul>
+{{for error in errores:}}
+<li>{{=error}}
+{{pass}}
+</ul>
+{{pass}}
